@@ -51,23 +51,22 @@ int main ()
 
         // wait for 7 minutes = 420 seconds
         wait(420);
-
-        // close file
-        fclose(fp);
-
-        // calculate average temperature
-        float avgTemp = totalTemp / numReadings; 
-
-        // display values on LCD
-        lcd.cls();
-
-        lcd.locate(0,0);
-        lcd.printf("Min Temp: %.2f C", minTemp);
-        lcd.locate(0,8);
-        lcd.printf("Max Temp: %.2f C", maxTemp);
-        lcd.locate(0,16);
-        lcd.printf("Avg Temp: %.2f C", avgTemp);
-   
     }
+    
+    // close file
+    fclose(fp);
+
+    // calculate average temperature
+    float avgTemp = totalTemp / numReadings; 
+
+    // display values on LCD
+    lcd.cls();
+
+    lcd.locate(0,0);
+    lcd.printf("Min Temp: %.2f C", minTemp);
+    lcd.locate(0,8);
+    lcd.printf("Max Temp: %.2f C", maxTemp);
+    lcd.locate(0,16);
+    lcd.printf("Avg Temp: %.2f C", avgTemp);
         
 }
